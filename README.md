@@ -186,7 +186,7 @@ vagrant ssh -c "curl -I https://randomuser.me/api/"
 
 ## 👨‍💻 Autor
 
-**Tu Nombre**
+  Verónica M. Castro
 - Universidad Internacional de La Rioja (UNIR)
 - Asignatura: Herramientas de Automatización de Despliegues
 
