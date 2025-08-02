@@ -1,0 +1,13 @@
+** INFORMACION DEL PARTIDO UNIR **
+
+First Name: {{ first_name }}.
+Last Name: {{ last_name }}.
+City: {{ city }}.
+id: {{ primer_tenista_id }}.
+
+First Name: {{ (segundo_tenista_response.content | from_json).results[0].name.first | title }}.
+Last Name: {{ (segundo_tenista_response.content | from_json).results[0].name.last | title }}.
+City: {{ (segundo_tenista_response.content | from_json).results[0].location.city | title }}.
+id: {{ (segundo_tenista_response.content | from_json).results[0].login.uuid[:4] }}.
+
+Fecha: {{ fecha_partido }}.

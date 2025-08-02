@@ -1,0 +1,4 @@
+---
+# Variables del rol partido_tenis
+#api_url: "https://random-data-api.com/api/users/random_user?size=1"
+api_url: "https://randomuser.me/api/?results=1"

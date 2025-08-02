@@ -1,0 +1,25 @@
+---
+- name: Obtener datos del segundo tenista desde la API
+  uri:
+    url: "{{ api_url }}"
+    method: GET
+    return_content: yes
+  register: segundo_tenista_response
+
+- name: Obtener fecha actual
+  set_fact:
+    fecha_partido: "{{ ansible_date_time.iso8601 }}"
+
+- name: Generar archivo partido.txt desde template
+  template:
+    src: partido.txt.j2
+    dest: /vagrant/partido.txt
+    mode: '0644'
+
+- name: Mostrar contenido del archivo partido.txt
+  command: cat /vagrant/partido.txt
+  register: contenido_partido
+
+- name: Visualizar contenido por pantalla
+  debug:
+    msg: "{{ contenido_partido.stdout }}"
