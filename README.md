@@ -2,25 +2,25 @@
 Implementación de un despliegue con vagrant, virtual box y ansible
 
 
-# 🎾 Generador Automático de Partidos de Tenis - UNIR
+#  Generador Automático de Partidos de Tenis - UNIR
 
 Sistema automatizado para generar partidos de tenis aleatorios usando **Vagrant**, **Ansible** y **VirtualBox**.
 
-## 📋 Descripción
+## Descripción
 
 Este proyecto implementa un sistema que genera automáticamente información de partidos de tenis entre dos tenistas:
 - **Primer tenista**: Datos configurados manualmente
 - **Segundo tenista**: Datos obtenidos aleatoriamente desde la API de RandomUser.me
 - **Fecha del partido**: Generada automáticamente
 
-## 🛠️ Tecnologías Utilizadas
+## Tecnologías Utilizadas
 
 - **Vagrant 2.4+**: Gestión de máquinas virtuales
 - **Ansible 2.12+**: Automatización y configuración
 - **VirtualBox 7.1+**: Proveedor de virtualización
 - **Ubuntu 20.04**: Sistema operativo base
 
-## 📁 Estructura del Proyecto
+##  Estructura del Proyecto
 
 ```
 proyecto_tenis/
@@ -38,7 +38,7 @@ proyecto_tenis/
             └── main.yml            # Variables del rol
 ```
 
-## 🚀 Instalación y Uso
+##  Instalación y Uso
 
 ### Prerrequisitos
 
@@ -76,7 +76,7 @@ sudo apt install vagrant virtualbox ansible
    cat partido.txt
    ```
 
-## 📄 Resultado Esperado
+##  Resultado Esperado
 
 El archivo `partido.txt` generado contiene:
 
@@ -96,7 +96,7 @@ id: a1b2.
 Fecha: 2023-05-12T10:04:54Z.
 ```
 
-## ⚙️ Configuración
+##  Configuración
 
 ### Variables del Primer Tenista
 
@@ -117,7 +117,7 @@ Modifica `partido_vars.yml`:
 primer_tenista_id: 5678
 ```
 
-## 🔧 Comandos Útiles
+##  Comandos Útiles
 
 ```bash
 # Crear y ejecutar por primera vez
@@ -136,13 +136,13 @@ vagrant ssh -c "cat /vagrant/partido.txt"
 vagrant destroy
 ```
 
-## 🌐 API Utilizada
+##  API Utilizada
 
 - **RandomUser.me**: `https://randomuser.me/api/?results=1`
 - Genera datos aleatorios de usuarios ficticios
 - Campos utilizados: `name.first`, `name.last`, `location.city`, `login.uuid`
 
-## 🐛 Solución de Problemas
+##  Solución de Problemas
 
 ### Error de vagrant-vbguest
 
@@ -161,7 +161,7 @@ Si la API no responde, verifica tu conexión a internet desde la VM:
 vagrant ssh -c "curl -I https://randomuser.me/api/"
 ```
 
-## 📚 Estructura de Ansible
+##  Estructura de Ansible
 
 ### Rol `partido_tenis`
 
@@ -175,7 +175,7 @@ vagrant ssh -c "curl -I https://randomuser.me/api/"
 - Carga variables desde archivo externo
 - Ejecuta el rol `partido_tenis`
 
-## 🎯 Objetivos Cumplidos
+##  Objetivos Cumplidos
 
 - ✅ Desarrollo con Vagrant y Ansible
 - ✅ Creación de playbooks y roles
@@ -184,13 +184,13 @@ vagrant ssh -c "curl -I https://randomuser.me/api/"
 - ✅ Generación automática de archivos
 - ✅ Templates con Jinja2
 
-## 👨‍💻 Autor
+## Autor
 
   Verónica M. Castro
 - Universidad Internacional de La Rioja (UNIR)
 - Asignatura: Herramientas de Automatización de Despliegues
 
-## 📄 Licencia
+##  Licencia
 
 Este proyecto es parte de una actividad académica de UNIR.
 
